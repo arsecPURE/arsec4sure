@@ -1,41 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>arsecPURE |      Minecraft Developer</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('http://static.photos/abstract/1200x630/42');
+            background-size: cover;
+            background-position: center;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
 </head>
-<body>
-  <header>
-  <img src="Nonfighting.png" alt="" style="height: 120px; float: left; margin-right: 15px;">
-  <h1>arsecPURE</h1>
-  <p>     Minecraft Server Developer</p>
-</header>
+<body class="font-sans bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="flex items-center py-2 px-2">
+                        <span class="font-semibold text-gray-900 text-lg">Portfolio</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link py-2 px-2 text-gray-900 hover:text-blue-500">Home</a>
+                    <a href="#about" class="nav-link py-2 px-2 text-gray-900 hover:text-blue-500">About</a>
+                    <a href="#projects" class="nav-link py-2 px-2 text-gray-900 hover:text-blue-500">Projects</a>
+                    <a href="#contact" class="nav-link py-2 px-2 text-gray-900 hover:text-blue-500">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-900" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m <strong>arsecPURE</strong>, a Minecraft server developer with over 2 years of experience in creating unique, high-performance servers. From custom plugins to gameplay mechanics, I bring ideas to life in the world of Minecraft. I focus on optimizing performance, player engagement, and smooth multiplayer experiences.</p>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen flex items-center justify-center text-white" data-aos="fade-in">
+        <div class="text-center px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Hi, I'm <span class="text-blue-500">arsec4sure</span></h1>
+            <p class="text-xl md:text-2xl mb-8">Creative Minecraft Server Developer</p>
+            <a href="#projects" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">View My Work</a>
+        </div>
+    </section>
 
-  <section id="resume">
-    <h2>Skills & Experience</h2>
-    <ul>
-      <li>✔ 2+ years of Minecraft server development</li>
-      <li>✔ Proficient in Spigot, Paper, and Bukkit APIs</li>
-      <li>✔ Familiar with Java and plugin development</li>
-      <li>✔ Experience with server hosting and optimization</li>
-      <li>✔ Created multiple custom minigames and mechanics</li>
-    </ul>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0" data-aos="fade-right">
+                    <img src="https://i.pinimg.com/736x/81/45/79/81457963b8ec97efc48cce195288f87c.jpg" alt="Profile" class="rounded-full w-64 h-64 object-cover mx-auto shadow-xl">
+                </div>
+                <div class="md:w-2/3 md:pl-12" data-aos="fade-left">
+                    <p class="text-lg mb-6">I am a passionate and seasoned Minecraft player with a proven track record of contributing to and shaping some of Nepal's most vibrant SMP communities. My journey is built on a foundation of collaboration, technical understanding, and a deep commitment to enhancing the player experience.</p>
+                    <p class="text-lg mb-6">My expertise was honed on the front lines of Neporia Realms, one of Nepal's premier active Lifesteal servers, where strategy and survival go hand-in-hand. I've navigated the complex economies of Nepali Token SMP and Nepali Gem SMP, mastering server-specific mechanics and thriving within their unique ecosystems.</p>
+                    <p class="text-lg mb-6">Furthermore, I have been a part of the entire legacy of Yeticraft, having played through Seasons 1, 2, and 3. This long-term commitment has given me a unique perspective on server evolution, meta shifts, and the building of lasting in-game legacies.</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 Email me at: <a href="mailto:kingsshnt@gmail.com">kingsshnt@gmail.com</a></p>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in">
+                    <img src="https://i.pinimg.com/736x/22/c4/7f/22c47fdeee28efe12f983bb17805812a.jpg" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Neporia Realms</h3>
+                        <p class="text-gray-700 mb-4">A cracked lifesteal minecraft server of Nepal.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-700 font-medium">
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://i.pinimg.com/736x/7d/e0/1e/7de01eb93f5cafaed09685cb842aafc0.jpg" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">YetiCraft</h3>
+                        <p class="text-gray-700 mb-4">A cracked lifesteal server with minigames.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-700 font-medium">
+                    </div>
+                </div>
 
-  <footer>
-    <p>&copy; 2025 arsecPURE. All rights reserved.</p>
-  </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <p class="mb-6">Feel free to reach out if you're looking for a minecraft server developer,     Have a question, or just want to connect.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 mr-4"></i>
+                            <span>kingsshnt@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 mr-4"></i>
+                            <span>+977 9745356396</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-500 mr-4"></i>
+                            <span>Chitwan, Nepal</span>
+                        </div>
+                    </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 arsec4sure. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-blue-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-blue-400 transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const navLinks = document.querySelector('.md\\:flex.items-center.space-x-8');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
